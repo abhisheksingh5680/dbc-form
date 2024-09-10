@@ -17,20 +17,20 @@ const Result = () => {
         console.log("inputs ", inputs);
 
     }
-    const photoUpload = (event) => {
-        event.preventDefault();
-        const file = event.target.files[0];
-        const reader = new FileReader();
+    // const photoUpload = (event) => {
+    //     event.preventDefault();
+    //     const file = event.target.files[0];
+    //     const reader = new FileReader();
 
-        if (file) {
-            reader.onloadend = () => {
-                // setFile(file);
-                // setImagePreview(reader.result);
-                setInputs(values => ({ ...values, [event.target.name]: reader.result }));
-            };
-            reader.readAsDataURL(file);
-        }
-    };
+    //     if (file) {
+    //         reader.onloadend = () => {
+    //             // setFile(file);
+    //             // setImagePreview(reader.result);
+    //             setInputs(values => ({ ...values, [event.target.name]: reader.result }));
+    //         };
+    //         reader.readAsDataURL(file);
+    //     }
+    // };
 
     return (
         <div className="main">
@@ -57,7 +57,7 @@ const Result = () => {
                         </div>
                         <div className="line"></div>
 
-                        <div class="new">
+                        <div className="new">
                             {/* <span><b>abhishek.22scse2030022@galgotiasuniversity.edu.in</b></span>
                             <br></br> */}
                             <a href="https://myaccount.google.com/?hl=en&utm_source=OGB&utm_medium=act&pli=1" className="link1">Switch account</a>
@@ -72,7 +72,7 @@ const Result = () => {
                             </p>
                         </div>
                         <div className="line1"></div>
-                        <div class="indicator">* Indicates required question</div>
+                        <div className="indicator">* Indicates required question</div>
 
                     </div>
                     <div className="div-secondform">
@@ -92,7 +92,7 @@ const Result = () => {
                         </div>
                         <div className="div-potrait">
                             <div className="img1">
-                                <img src="/Images/image_a.png" name="gold" accept=".jpef, .png, .jpg" alt="" />
+                                <img src="/Images/image_a.png" name="gold" alt=""  />
 
                                 <div className="rad1">
                                     <input type="radio" id="f1" className="f1" name="img" value="gold"
@@ -101,7 +101,7 @@ const Result = () => {
                                 </div>
                             </div>
                             <div className="img2">
-                                <img src="/Images/image_b.png" name="silver" accept=".jpef, .png, .jpg" alt="" />
+                                <img src="/Images/image_b.png" name="silver" alt="" />
 
                                 <div className="rad2" >
                                     <input type="radio" id="f2" className="f2" name="img" value="silver"
@@ -110,7 +110,7 @@ const Result = () => {
                             </div>
 
                             <div className="img3">
-                                <img src="/Images/image_c.png" name="black" accept=".jpef, .png, .jpg" alt="" />
+                                <img src="/Images/image_c.png" name="black" alt="" />
                                 <div className="rad3">
                                     <input type="radio" id="f3" className="f3" name="img" value="black"
                                         onChange={handleChange} />
@@ -118,7 +118,7 @@ const Result = () => {
                                 </div>
                             </div>
                             <div className="img4">
-                                <img src="/Images/image_d.png" name="bamboo" accept=".jpef, .png, .jpg" alt="" />
+                                <img src="/Images/image_d.png" name="bamboo" alt="" />
                                 <div className="rad4">
                                     <input type="radio" id="f4" className="f4" name="img" value="bamboo"
                                         onChange={handleChange} />
@@ -131,26 +131,26 @@ const Result = () => {
                     <div className="div-fourthform">
                         <div className="div-design">
                             <div className="img11">
-                                <img src="/Images/image_ab.png" name="one" accept=".jpef, .png, .jpg" alt="" />
+                                <img src="/Images/image_ab.png" name="one" alt="" />
 
                                 <div className="rad11">
-                                    <input type="radio" id="f1" className="f1" name="img1" value="one"
+                                    <input type="radio" id="d1" className="d1" name="img1" value="one"
                                         onChange={handleChange} />
                                     Design1
                                 </div>
                             </div>
                             <div className="img22">
-                                <img src="/Images/image_bc.png" name="two" accept=".jpef, .png, .jpg" alt="" />
+                                <img src="/Images/image_bc.png" name="two" alt="" />
 
                                 <div className="rad22" >
-                                    <input type="radio" id="f2" className="f2" name="img1" value="two"
+                                    <input type="radio" id="d2" className="d2" name="img1" value="two"
                                         onChange={handleChange} />
                                     Design2</div>
                             </div>
                             <div className="img33">
-                                <img src="/Images/image_cd.png" name="three" accept=".jpef, .png, .jpg" alt="" />
+                                <img src="/Images/image_cd.png" name="three" alt="" />
                                 <div className="rad33">
-                                    <input type="radio" id="f3" className="f3" name="img1" value="three"
+                                    <input type="radio" id="d3" className="d3" name="img1" value="three"
                                         onChange={handleChange} />
                                     Design3
                                 </div>
@@ -210,10 +210,12 @@ const Result = () => {
                             <br />
 
                             <div className="deta">
-                                <input type="text" placeholder="Your answer" name="details" value={inputs.details || ""}
+                                <input type="Number" placeholder="Your answer" name="number" value={inputs.number || ""}
                                     onChange={handleChange} required />
-                            </div></div>
-                    </div>
+                            </div>
+
+
+                        </div></div>
                     <div className="div-tenthform">
                         <div className="code">
                             <b>Upload QR Code of the digital bussiness card</b>
@@ -233,7 +235,7 @@ const Result = () => {
                             <h3>Digital Bussiness URL</h3>
 
                             <div className="profile">
-                                <input type="text" placeholder='Your answer' name="url" value={inputs.url || ""}
+                                <input type="url" placeholder='Your answer' name="url" value={inputs.url || ""}
                                     onChange={handleChange} required />
                             </div>
                         </div>
@@ -252,14 +254,14 @@ const Result = () => {
                     <div className="div-last">
 
                         <div className="next">
-                            <input type="submit" class="next" value="Submit" />
+                            <input type="submit" className="next" value="Submit" />
                         </div>
                         <div className="clear">
-                            <input type="reset" class="clear" value="Clear Form" />
+                            <input type="reset" className="clear" value="Clear Form" />
                         </div>
                     </div>
 
-                    <div class="div-indim">
+                    <div className="div-indim">
                         Never submit passwords through Google Forms.
                     </div>
 
