@@ -12,8 +12,8 @@ const Result = () => {
         setInputs(values => ({ ...values, [name]: value }))
     }
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
+    let handleSubmit = (event) => {
+        // event.preventDefault();
         console.log("inputs ", inputs);
 
     }
@@ -170,7 +170,7 @@ const Result = () => {
                             <div className="logo">
                                 <input type="file" placeholder='Add file' name="brand" value={inputs.brand || ""}
                                     onChange={handleChange} required />
-                            </div>x
+                            </div>
                         </div>
                     </div>
                     <div className="div-sixthform">
