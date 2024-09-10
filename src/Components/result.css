@@ -558,7 +558,7 @@ input[type="text"] {
 
 }
 
-input[type="text"] {
+input[type="number"] {
     border: none;
     width: 100%;
     border: 1px solid;
@@ -595,7 +595,12 @@ input[type="text"] {
     font: 400 16px Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
 }
 
-input[type="text"] {
+.comp {
+    background-color: transparent;
+    border: none;
+}
+
+input[type="url"] {
     border: none;
     width: 100%;
     border: 1px solid;
