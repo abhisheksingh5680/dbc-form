@@ -134,7 +134,7 @@ const Result = () => {
                                 <img src="/Images/image_ab.png" name="one" accept=".jpef, .png, .jpg" alt="" />
 
                                 <div className="rad11">
-                                    <input type="radio" id="f1" className="f1" name="img" value="one"
+                                    <input type="radio" id="f1" className="f1" name="img1" value="one"
                                         onChange={handleChange} />
                                     Design1
                                 </div>
@@ -143,14 +143,14 @@ const Result = () => {
                                 <img src="/Images/image_bc.png" name="two" accept=".jpef, .png, .jpg" alt="" />
 
                                 <div className="rad22" >
-                                    <input type="radio" id="f2" className="f2" name="img" value="two"
+                                    <input type="radio" id="f2" className="f2" name="img1" value="two"
                                         onChange={handleChange} />
                                     Design2</div>
                             </div>
                             <div className="img33">
                                 <img src="/Images/image_cd.png" name="three" accept=".jpef, .png, .jpg" alt="" />
                                 <div className="rad33">
-                                    <input type="radio" id="f3" className="f3" name="img" value="three"
+                                    <input type="radio" id="f3" className="f3" name="img1" value="three"
                                         onChange={handleChange} />
                                     Design3
                                 </div>
