@@ -178,9 +178,10 @@ const Result = () => {
                             <h3>Name</h3>
 
                             <div className="ans">
-                                <input type="text" placeholder='Your answer' pattern="[A-Za-z]*" oninvalid="alert('Please enter only alphabets.');" name="customer" value={inputs.customer || ""}
-                                    onChange={handleChange} required />
-                               
+{/*                                 <input type="text" placeholder='Your answer' pattern="[A-Za-z]*" oninvalid="alert('Please enter only alphabets.');" name="customer" value={inputs.customer || ""}
+                                    onChange={handleChange} required /> */}
+                               <input type="text" pattern="[a-zA-Z]+" placeholder="Enter only alphabets" oninvalid="alert('Please enter only alphabets.');">
+
                             </div>
                         </div>
                     </div>
