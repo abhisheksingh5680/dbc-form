@@ -180,6 +180,7 @@ const Result = () => {
                             <div className="ans">
                                 <input type="text" placeholder='Your answer' pattern="[A-Za-z]*" name="customer" value={inputs.customer || ""}
                                     onChange={handleChange} required />
+                                <span id="errorAlert" style="color: red;"></span> 
                             </div>
                         </div>
                     </div>
