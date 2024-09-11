@@ -210,7 +210,7 @@ const Result = () => {
                             <br />
 
                             <div className="deta">
-                                <input type="text" placeholder="Your answer" name="number" value={inputs.text || ""}
+                                <input type="text" placeholder="Your answer" name="text" value={inputs.text || ""}
                                     onChange={handleChange} required />
                             </div>
 
